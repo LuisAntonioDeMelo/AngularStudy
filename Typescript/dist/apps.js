@@ -14,19 +14,17 @@ for (var i = 0; i < lista2.length; i++) {
         }
     }
 }
-var search;
-(function (val, pos) {
-    return bsearch(val, pos, 0, val.length);
-});
-var bsearch;
-(function (val, pos, ini, end) {
-    var mid = ini + (end - ini) / 2;
-    if (ini > end) {
-        return -1;
-    }
-    else if (val[mid] > pos) {
-        return bsearch(val);
-    }
-    return 0;
-});
+// const search(val:number[],pos:number)=>{
+//     return bsearch(val,pos,0,val.length);
+// }
+// const bsearch(val:number[],pos:number,ini:number,end:number){
+//     let mid = ini + (end - ini)/2
+//     if(ini > end){
+//         return -1
+//     }
+//     else if(val[mid] > pos){
+//         return bsearch(val,)
+//     }
+//     return 0
+// }
 console.log(lista2);
