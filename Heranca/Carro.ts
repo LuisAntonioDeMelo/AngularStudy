@@ -10,8 +10,14 @@ export default class Carro extends Veiculo {
         this.numeroDePortas = numeroDePortas
     }
 
+    public getModelo(): string {
+        return this.modelo
+    }
 
-    
+    public setModelo(modelo : string):void {
+        this.modelo = modelo
+    }
+
 
 
 

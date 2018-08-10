@@ -26,6 +26,12 @@ var Carro = /** @class */ (function (_super) {
         _this.numeroDePortas = numeroDePortas;
         return _this;
     }
+    Carro.prototype.getModelo = function () {
+        return this.modelo;
+    };
+    Carro.prototype.setModelo = function (modelo) {
+        this.modelo = modelo;
+    };
     return Carro;
 }(Veiculo_1.default));
 exports.default = Carro;
