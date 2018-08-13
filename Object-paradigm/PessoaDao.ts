@@ -1,7 +1,7 @@
 import {DaoInterface} from './DaoInterface'
 import Pessoa from './Concessionaria'
 
-export class PessoaDao implements DaoInterface{
+export class PessoaDao implements DaoInterface<Pessoa>{
    
     nomeTabela: string = 'tb_concessionaria'
 
