@@ -1,6 +1,7 @@
 class NegociacaoController {
     constructor() {
         this.negociacoes = new Negociacoes();
+        this.negociacoesView = new NegociacaoView("#negociacaoView");
         this.inputData = document.querySelector('#data');
         this.inputData = document.querySelector('#quantidade');
         this.inputData = document.querySelector('#valor');
