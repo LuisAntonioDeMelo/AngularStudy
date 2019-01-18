@@ -1,21 +1,16 @@
 class NegociacaoController {
     constructor() {
-        this.negociacoes = new Negociacoes();
-        this.negociacoesView = new NegociacaoView("#negociacaoView");
-        this.inputData = document.querySelector('#data');
-        this.inputData = document.querySelector('#quantidade');
-        this.inputData = document.querySelector('#valor');
+        this._negociacoes = new Negociacoes();
+        this._negociacoesView = new NegociacaoView('#negociacoesView');
+        this._inputData = document.querySelector('#data');
+        this._inputQuantidade = document.querySelector('#quantidade');
+        this._inputValor = document.querySelector('#valor');
+        this._negociacoesView.update(this._negociacoes);
     }
     adiciona(event) {
         event.preventDefault();
-        const negociao = new Negociacao(new Date(this.inputData.value.replace(/-/g, ',')), parseInt(this.inputQuantidade.value), parseFloat(this.inputValor.value));
-        console.log(negociacao);
-        this.negociacoes.adiciona(negociacao);
-        this.negociacoes.paraArray().forEach(negociacao => {
-            console.log(negociacao.data);
-            console.log(negociacao.quantidade);
-            console.log(negociacao.valor);
-            console.log(negociacao.volume);
-        });
+        const negociacao = new Negociacao(new Date(this._inputData.value.replace(/-/g, ',')), parseInt(this._inputQuantidade.value), parseFloat(this._inputValor.value));
+        this._negociacoes.adiciona(negociacao);
+        this._negociacoesView.update(this._negociacoes);
     }
 }
